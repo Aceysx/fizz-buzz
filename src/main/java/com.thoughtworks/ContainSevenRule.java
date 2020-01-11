@@ -1,11 +1,11 @@
 package com.thoughtworks;
 
-public class ContainFiveRule implements Rule {
+public class ContainSevenRule implements Rule {
     @Override
     public String value(Integer number) {
         String result = "";
-        if (number % 5 == 0) {
-            result += BUZZ;
+        if (number % 3 == 0) {
+            result += FIZZ;
         }
         if (number % 7 == 0) {
             result += WHIZZ;
@@ -18,6 +18,6 @@ public class ContainFiveRule implements Rule {
     @Override
     public boolean isValid(Integer number) {
         String numberStr = String.valueOf(number);
-        return numberStr.contains("5") && !numberStr.contains("7");
+        return numberStr.contains("7") && !numberStr.contains("3");
     }
 }

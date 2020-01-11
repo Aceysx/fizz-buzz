@@ -70,4 +70,19 @@ public class FizzBuzzTest {
         assertEquals("BuzzWhizz", FizzBuzz.of(105));
     }
 
+    @Test
+    public void should_return_Fizz_when_contains_7_and_contains_3() {
+        assertEquals("Fizz", FizzBuzz.of(73));
+    }
+
+    @Test
+    public void should_return_Whizz_when_contains_7_and_not_contains_3_and_multiples_of_5_and_7() {
+        assertEquals("Whizz", FizzBuzz.of(70));
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_contains_7_and_not_contains_3_and_multiples_of_3_and_5_and_7() {
+        assertEquals("FizzWhizz", FizzBuzz.of(1470));
+    }
+
 }
