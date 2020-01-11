@@ -1,12 +1,9 @@
 package com.thoughtworks;
 
-public class DefaultRule implements Rule {
+public class ContainFiveRule implements Rule {
     @Override
     public String value(Integer number) {
         String result = "";
-        if (number % 3 == 0) {
-            result += FIZZ;
-        }
         if (number % 5 == 0) {
             result += BUZZ;
         }
@@ -20,6 +17,7 @@ public class DefaultRule implements Rule {
 
     @Override
     public boolean isValid(Integer number) {
-        return true;
+        String numberStr = String.valueOf(number);
+        return numberStr.contains("5") && !numberStr.contains("7");
     }
 }
