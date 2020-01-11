@@ -70,9 +70,4 @@ public class FizzBuzzTest {
         assertEquals("BuzzWhizz", FizzBuzz.of(105));
     }
 
-    @Test
-    public void should_return_Fizz_when_contains_7_and_contains_3() {
-        assertEquals("Fizz", FizzBuzz.of(73));
-    }
-
 }
