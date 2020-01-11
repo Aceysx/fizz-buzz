@@ -31,5 +31,26 @@ public class FizzBuzzTest {
         assertEquals("Whizz", FizzBuzz.of(14));
     }
 
+    @Test
+    public void should_return_FizzBuzz_when_multiples_of_3_and_5() {
+        assertEquals("FizzBuzz", FizzBuzz.of(60));
+        assertEquals("FizzBuzz", FizzBuzz.of(120));
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_multiples_of_3_and_7() {
+        assertEquals("FizzWhizz", FizzBuzz.of(21));
+        assertEquals("FizzWhizz", FizzBuzz.of(42));
+    }
+
+    @Test
+    public void should_return_BuzzWhizz_when_multiples_of_5_and_7() {
+        assertEquals("BuzzWhizz", FizzBuzz.of(140));
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_when_multiples_of_3_and_5_and_7() {
+        assertEquals("FizzBuzzWhizz", FizzBuzz.of(210));
+    }
 
 }
