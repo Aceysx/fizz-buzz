@@ -53,4 +53,10 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzzWhizz", FizzBuzz.of(210));
     }
 
+    @Test
+    public void should_return_Fizz_when_contains_3_and_not_contains_5() {
+        assertEquals("Fizz", FizzBuzz.of(13));
+        assertEquals("Fizz", FizzBuzz.of(30));
+    }
+
 }

@@ -7,7 +7,11 @@ public class FizzBuzz {
     public static final String WHIZZ = "Whizz";
 
     public static String of(Integer number) {
+        String numberStr = String.valueOf(number);
         String result = "";
+        if (numberStr.contains("3")) {
+            return FIZZ;
+        }
         if (number % 3 == 0) {
             result += FIZZ;
         }
