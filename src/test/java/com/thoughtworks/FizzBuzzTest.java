@@ -59,4 +59,20 @@ public class FizzBuzzTest {
         assertEquals("Fizz", FizzBuzz.of(30));
     }
 
+    @Test
+    public void should_return_Buzz_when_contains_5_and_not_contains_7_and_multiples_of_3_and_5() {
+        assertEquals("Buzz", FizzBuzz.of(15));
+        assertEquals("Buzz", FizzBuzz.of(45));
+    }
+
+    @Test
+    public void should_return_BuzzWhizz_when_contains_5_and_not_contains_7_and_multiples_of_3_and_5and_7() {
+        assertEquals("BuzzWhizz", FizzBuzz.of(105));
+    }
+
+    @Test
+    public void should_return_Fizz_when_contains_7_and_contains_3() {
+        assertEquals("Fizz", FizzBuzz.of(73));
+    }
+
 }

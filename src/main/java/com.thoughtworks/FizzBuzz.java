@@ -9,6 +9,15 @@ public class FizzBuzz {
     public static String of(Integer number) {
         String numberStr = String.valueOf(number);
         String result = "";
+        if (numberStr.contains("5") && !numberStr.contains("7")) {
+            if (number % 5 == 0) {
+                result += BUZZ;
+            }
+            if (number % 7 == 0) {
+                result += WHIZZ;
+            }
+            return result.isEmpty() ? numberStr : result;
+        }
         if (numberStr.contains("3")) {
             return FIZZ;
         }
