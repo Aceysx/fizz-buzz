@@ -1,5 +1,7 @@
 package com.thoughtworks;
 
+import com.thoughtworks.rule.*;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,7 +14,10 @@ public class FizzBuzz {
     );
 
     public static String of(Integer number) {
-        return Rule.find(rules, number)
+        String result = Rule.find(rules, number)
             .value(number);
+        return result.isEmpty()
+            ? String.valueOf(number)
+            : result;
     }
 }

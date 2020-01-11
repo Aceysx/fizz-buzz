@@ -1,12 +1,8 @@
-package com.thoughtworks;
+package com.thoughtworks.rule;
 
 import java.util.List;
 
 public interface Rule {
-    String FIZZ = "Fizz";
-    String BUZZ = "Buzz";
-    String WHIZZ = "Whizz";
-
     String value(Integer number);
 
     boolean isValid(Integer number);
