@@ -1,21 +1,18 @@
 package com.thoughtworks;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FizzBuzz {
-    private static Rule defaultRule = new DefaultRule();
-    private static Rule containThreeRule = new ContainThreeRule();
-    private static Rule containFiveRule = new ContainFiveRule();
-    private static Rule containSevenRule = new ContainSevenRule();
+    private static List<Rule> rules = Arrays.asList(
+        new ContainSevenRule(),
+        new ContainFiveRule(),
+        new ContainThreeRule(),
+        new DefaultRule()
+    );
 
     public static String of(Integer number) {
-        if (containSevenRule.isValid(number)) {
-            return containSevenRule.value(number);
-        }
-        if (containFiveRule.isValid(number)) {
-            return containFiveRule.value(number);
-        }
-        if (containThreeRule.isValid(number)) {
-            return containThreeRule.value(number);
-        }
-        return defaultRule.value(number);
+        return Rule.find(rules, number)
+            .value(number);
     }
 }
